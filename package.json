@@ -29,7 +29,8 @@
     "undeploy": "cf undeploy MyHANAApp --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
-    "watch-interaction_items_new": "cds watch --open interaction_items_new/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-interaction_items_new": "cds watch --open interaction_items_new/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-interaction_items": "cds watch --open interaction_items/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "fiori": {
@@ -60,6 +61,7 @@
   },
   "sapux": [
     "app/myhanaapp",
-    "app/interaction_items_new"
+    "app/interaction_items_new",
+    "app/interaction_items"
   ]
 }

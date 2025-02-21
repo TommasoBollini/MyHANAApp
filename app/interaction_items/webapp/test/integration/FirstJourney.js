@@ -18,6 +18,8 @@ sap.ui.define([
             opaTest("Navigate to ObjectPage", function (Given, When, Then) {
                 // Note: this test will fail if the ListReport page doesn't show any data
                 
+                When.onTheInteractions_HeaderList.onFilterBar().iExecuteSearch();
+                
                 Then.onTheInteractions_HeaderList.onTable().iCheckRows();
 
                 When.onTheInteractions_HeaderList.onTable().iPressRow(0);

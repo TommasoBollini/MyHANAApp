@@ -8,6 +8,7 @@ service CatalogService {
 @odata.draft.enabled: true
 entity Interactions_Header as projection on interactions.Headers;
 
+@requires: 'Admin'
 entity Interactions_Items  as projection on interactions.Items;
 
 @readonly
