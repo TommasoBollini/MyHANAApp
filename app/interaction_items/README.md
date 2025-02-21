@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Fri Feb 21 2025 11:17:17 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Fri Feb 21 2025 14:57:34 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.16.4|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -9,7 +9,7 @@
 |**Service Type**<br>Local Cap|
 |**Service URL**<br>http://localhost:4004/odata/v4/catalog/|
 |**Module Name**<br>interaction_items|
-|**Application Title**<br>Interaction Item List |
+|**Application Title**<br>Interaction Items List|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.133.0|
@@ -21,7 +21,7 @@
 
 ## interaction_items
 
-Interaction Item List 
+Interaction Items List
 
 ### Starting the generated app
 

@@ -15,6 +15,7 @@ entity Interactions_Items  as projection on interactions.Items;
 entity Languages           as projection on sap.common.Languages;
 
 @readonly
+@restrict: [{ grant: 'READ', where: 'country_code = ''DE'''}]
 entity HeaderView as projection on interactions.Headers;
 
 }

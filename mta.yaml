@@ -52,7 +52,9 @@ modules:
     keep-existing-routes: true
     memory: 256M
   build-parameters:
-    ignore: ["default-env.json", ".env"]
+    ignore:
+    - default-env.json
+    - .env
 - name: MyHANAApp-app-content
   type: com.sap.application.content
   path: .
