@@ -1,0 +1,65 @@
+{
+  "name": "MyHANAApp",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1.6.1",
+    "@sap-ux/fiori-annotation-api": "^0.4.9",
+    "@sap/cds": "^8.7.2",
+    "@sap/cds-common-content": "^2.1.0",
+    "@sap/cds-fiori": "file:./sap-cds-fiori-1.3.0.tgz",
+    "@sap/ux-specification": "^1.124.10",
+    "@sap/xssec": "^4",
+    "express": "^4",
+    "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.9.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8",
+    "mbt": "^1.2.29",
+    "rimraf": "^5.0.5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-myhanaapp": "cds watch --open myhanaapp/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy MyHANAApp --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-interaction_items_new": "cds watch --open interaction_items_new/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "fiori": {
+      "preview": true,
+      "ui5": {
+        "version": "1.96.0",
+        "host": "https://sapui5.hana.ondemand.com/",
+        "theme": {
+          "light": "sap_fiori_3",
+          "dark": "sap_fiori_3_dark",
+          "switch": true
+        }
+      }
+    },
+    "server": {
+      "index": true
+    },
+    "requires": {
+      "auth": "mocked",
+      "[production]": {
+        "auth": "xsuaa",
+        "db": "hana"
+      }
+    },
+    "sql": {
+      "native_hana_associations": false
+    }
+  },
+  "sapux": [
+    "app/myhanaapp",
+    "app/interaction_items_new"
+  ]
+}

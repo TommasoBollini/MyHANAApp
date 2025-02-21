@@ -1,0 +1,27 @@
+{
+  "name": "approuter",
+  "dependencies": {
+    "@sap-ux/fiori-annotation-api": "^0.4.9",
+    "@sap/approuter": "^18.0.0"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  },
+  "cds": {
+    "fiori": {
+      "preview": true,
+      "ui5": {
+        "version": "1.96.0",
+        "host": "https://sapui5.hana.ondemand.com/",
+        "theme": {
+          "light": "sap_fiori_3",
+          "dark": "sap_fiori_3_dark",
+          "switch": true
+        }
+      }
+    }
+  }
+}
