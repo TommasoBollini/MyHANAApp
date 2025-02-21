@@ -61,8 +61,6 @@
   },
   "sapux": [
     "app/myhanaapp",
-    "app/interaction_items_new",
-    "app/interaction_items",
     "app/interaction_items"
   ]
 }
